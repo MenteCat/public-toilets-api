@@ -1,0 +1,2 @@
+class PublicToiletItemsController < ApplicationController
+end
