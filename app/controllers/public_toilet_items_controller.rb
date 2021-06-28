@@ -17,7 +17,9 @@ class PublicToiletItemsController < ApplicationController
       @publicToiletItem = PublicToiletItem.create(
         borough_name: params[:borough_name],
         street_name: params[:street_name],
-        postcode: params[:postcode]
+        postcode: params[:postcode],
+        latitude: params[:latitude],
+        longitude: params[:longitude]
       )
       render json: @publicToiletItem 
     end
@@ -28,7 +30,9 @@ class PublicToiletItemsController < ApplicationController
       @publicToiletItem.update(
         borough_name: params[:borough_name],
         street_name: params[:street_name],
-        postcode: params[:postcode]
+        postcode: params[:postcode],
+        latitude: params[:latitude],
+        longitude: params[:longitude]
       )
       render json: @publicToiletItem 
     end

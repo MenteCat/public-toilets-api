@@ -6,6 +6,24 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-toilet1 = PublicToiletItem.create(borough_name: "Kingston Upon Thames", street_name: "Lully road", postcode: "KT1 1RQ")
-toilet2 = PublicToiletItem.create(borough_name: "Camden", street_name: "Magic road", postcode: "NW1 0GA")
-toilet3 = PublicToiletItem.create(borough_name: "Ealing", street_name: "Foo road", postcode: "W13 8BB")
+toilet1 = PublicToiletItem.create(
+  borough_name: "Kingston Upon Thames",
+  street_name: "Lully road",
+  postcode: "KT1 1RQ",
+  latitude: 41.8877508,
+  longitude: 12.4896423
+)
+toilet2 = PublicToiletItem.create(
+  borough_name: "Camden",
+  street_name: "Magic road",
+  postcode: "NW1 0GA",
+  latitude: 41.8915034,
+  longitude: 12.4850259
+)
+toilet3 = PublicToiletItem.create(
+  borough_name: "Ealing",
+  street_name: "Foo road",
+  postcode: "W13 8BB",
+  latitude: 41.8902714,
+  longitude: 12.4866937
+)
