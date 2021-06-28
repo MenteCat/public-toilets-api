@@ -1,13 +1,28 @@
-class PublicToiletItemsController < ApplicationController
+class Api::V1::PublicToiletItemsController < ApplicationController
 
 # Index: display all instances of public toilet items in our database
     def index
-      @publicToiletItems = PublicToiletItem.all
+      query = {}
+
+      if params[:postcode]
+        query = query.merge({'postcode': params[:postcode]})
+      end
+
+      if params[:lat]
+        query = query.merge({'latitude': params[:lat]})
+      end
+
+      if params[:lon]
+        query = query.merge({'longitude': params[:lon]})
+      end
+
+      @publicToiletItems = PublicToiletItem.where(query)
       render json: @publicToiletItems
     end  
 
 # Show: display an instance of a public toilet item
     def show
+
       @publicToiletItem = PublicToiletItem.find(params[:id])
       render json: @publicToiletItem
     end

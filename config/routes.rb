@@ -1,3 +1,7 @@
 Rails.application.routes.draw do
-  resources :public_toilet_items, only: [:index, :show, :create, :update, :destroy]
+  namespace :api do
+    namespace :v1 do
+      resources :public_toilet_items, only: [:index, :show, :create, :update, :destroy]
+    end
+  end
 end
